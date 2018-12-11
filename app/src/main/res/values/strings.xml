@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="search">SEARCH</string>
+    <string name="drawer_open">Drawer Open</string>
+    <string name="drawer_close">Drawer Close</string>
+    <string name="night_mode">Night mode</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="yopish">YOPISH</string>
+    <string name="javoblar_varaqasi_raqami">Javoblar varaqasi raqami</string>
+    <string name="tasdiqlash_kodi">Tasdiqlash kodi</string>
+    <string name="tasdiqlash">TASDIQLASH</string>
+    <string name="izox">Izoh: - Bu yerda yangi formatda chop etilgan, xarid qilingan repetitsion test natijalarini elektron shaklda tekshirishingiz mumkin.</string>
+    <string name="textview">TextView</string>
+
+
+</resources>
