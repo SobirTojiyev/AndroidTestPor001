@@ -9,7 +9,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.tojiy.myapplication.R;
 
@@ -33,7 +35,7 @@ public class RecycOnlineTest extends RecyclerView.Adapter<RecycOnlineTest.OnLine
     }
 
     @Override
-    public void onBindViewHolder(@NonNull OnLineViewHolder cin, int i) {
+    public void onBindViewHolder(@NonNull final OnLineViewHolder cin, int i) {
 //
         cin.txtTitle.setText(getSetOnlines.get(i).getNomi1());
         cin.txtIzoh.setText(getSetOnlines.get(i).getNomi5());
@@ -44,7 +46,8 @@ public class RecycOnlineTest extends RecyclerView.Adapter<RecycOnlineTest.OnLine
         cin.btnFoydali.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+//                cin.linearLayout.setVisibility(View.INVISIBLE);
+//                Toast.makeText(context, "", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -62,9 +65,12 @@ public class RecycOnlineTest extends RecyclerView.Adapter<RecycOnlineTest.OnLine
         private TextView txtIzoh, txtTitle;
         private Button btnFoydali;
         private ImageView imageView;
+        private LinearLayout linearLayout;
 
         public OnLineViewHolder(@NonNull View itemView) {
             super(itemView);
+
+            linearLayout = itemView.findViewById(R.id.linerRepitetsion);
             txtIzoh = itemView.findViewById(R.id.txtFoyydaliIzox);
             txtTitle = itemView.findViewById(R.id.txtFoydaliTitile);
 

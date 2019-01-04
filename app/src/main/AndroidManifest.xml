@@ -3,6 +3,10 @@
     package="com.example.tojiy.myapplication">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
 
     <application
         android:allowBackup="true"
@@ -19,7 +23,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".search.Search123" />
-        <activity android:name=".open_list.Opener"></activity>
+        <activity android:name=".open_list.Opener" />
+        <activity android:name=".webview.WebViewClass" />
+        <activity android:name=".foydalimalumotlar.testtopshiriqlari.TestTopshiriq1" />
+        <activity android:name=".foydalimalumotlar.javoblarvaraqasi.JavoblarTN"></activity>
     </application>
 
 </manifest>
