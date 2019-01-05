@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.MediaController;
+import android.widget.Toast;
 import android.widget.VideoView;
 
 import com.example.tojiy.myapplication.R;
@@ -12,28 +13,28 @@ import com.example.tojiy.myapplication.R;
 public class JavoblarTN extends AppCompatActivity {
 
     String vidAddress = "http://192.168.57.2/shohruhxon.mp4";
-    Uri vidUri = Uri.parse(vidAddress);
+    MediaController mc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_test_topshiriq);
-        final MediaController vidControl = new MediaController(this);
-        final VideoView vidView = findViewById(R.id.myVideo);
-        vidView.setVideoURI(vidUri);
-        vidView.requestFocus();
-        vidView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-            @Override
-            public void onPrepared(MediaPlayer mp) {
-                mp.setLooping(true);
-                vidView.start();
-            }
-        });
+
+        VideoView videoView = findViewById(R.id.myVideo);
+        Uri vidUri = Uri.parse(vidAddress);
+        videoView.setVideoURI(vidUri);
+        videoView.requestFocus();
+        mc = new MediaController(this);
+        mc.setAnchorView(videoView);
+        videoView.setMediaController(mc);
+//        mc.show();
+        videoView.start();
+
+    }
+}
+
 //
 //        vidControl.setAnchorView(vidView);
 //        vidView.setMediaController(vidControl);
 //        vidView.start();
 
-    }
-}

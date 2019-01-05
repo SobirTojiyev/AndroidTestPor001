@@ -54,6 +54,9 @@ public class RecycFoydali extends RecyclerView.Adapter<RecycFoydali.FoydaliHolde
                 if (getSetFoydalis.get(i).getUrl().trim().contains("testtopshiriq")) {
                     v.getContext().startActivity(new Intent(v.getContext(), WebViewClass.class));
                 }
+                if (getSetFoydalis.get(i).getUrl().trim().contains("testtopshiriq")) {
+                    v.getContext().startActivity(new Intent(v.getContext(), WebViewClass.class));
+                }
 
 //                Toast.makeText(context, "" + getSetFoydalis.get(i).getUrl(), Toast.LENGTH_SHORT).show();
             }
