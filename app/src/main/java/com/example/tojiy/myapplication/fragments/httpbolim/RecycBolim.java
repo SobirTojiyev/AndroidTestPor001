@@ -51,6 +51,7 @@ public class RecycBolim extends RecyclerView.Adapter<RecycBolim.BolimHolder> {
                 FoydaliMalumot foydaliMalumot = new FoydaliMalumot();
                 FragmentManager fragmentManager = ((AppCompatActivity) v.getContext()).getSupportFragmentManager();
                 foydaliMalumot.show(fragmentManager, "");
+
             }
         });
 

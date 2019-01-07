@@ -3,6 +3,11 @@ package com.example.tojiy.myapplication.foydalimalumotlar;
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.v4.app.DialogFragment;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -52,7 +57,13 @@ public class RecycFoydali extends RecyclerView.Adapter<RecycFoydali.FoydaliHolde
                     v.getContext().startActivity(new Intent(v.getContext(), WebViewClass.class));
                 }
                 if (getSetFoydalis.get(i).getUrl().trim().contains("123")) {
-//                    v.getContext().startActivity(new Intent(v.getContext(), TestTopshiriq1.class));
+
+
+//                    TestTopshiriq1 testTopshiriq12 = new TestTopshiriq1();
+//                    FragmentManager fragmentManager2 = ((AppCompatActivity) v.getContext()).getSupportFragmentManager();
+//                    testTopshiriq12.show(fragmentManager2, "blok");
+                    v.getContext().startActivity(new Intent(v.getContext(), TestTopshiriq1.class));
+
                 }
 
 

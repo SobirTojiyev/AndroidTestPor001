@@ -33,9 +33,9 @@ public class DataTestTopshiriq extends AsyncTask<Void, Void, Integer> {
     @Override
     protected void onPostExecute(Integer result) {
         super.onPostExecute(result);
-
-//         recycOnlineTest = new RecycOnlineTest(c, getSetOnlines);
-//        rv.setAdapter(recycOnlineTest);
+//
+//         RecycTopshiriq recycTopshiriq = new RecycTopshiriq(c, getSetTestTopshiriqs);
+//        rv.setAdapter(recycTopshiriq);
 
     }
 

@@ -6,8 +6,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.tojiy.myapplication.R;
 
@@ -49,6 +52,12 @@ public class RecycTopshiriq extends RecyclerView.Adapter<RecycTopshiriq.ViewTest
 
         public ViewTestTop(@NonNull View itemView) {
             super(itemView);
+
+            spinner = itemView.findViewById(R.id.spinnerID);
+            txt = itemView.findViewById(R.id.txtSppiner);
+
+            ArrayAdapter<GetSetTestTopshiriq> adapter = new ArrayAdapter<GetSetTestTopshiriq>(context, android.R.layout.simple_list_item_1, getSetTestTopshiriqs);
+            spinner.setAdapter(adapter);
         }
     }
 }
