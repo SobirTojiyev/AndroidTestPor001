@@ -49,6 +49,7 @@ public class RecycTopshiriq extends RecyclerView.Adapter<RecycTopshiriq.ViewTest
 
         private Spinner spinner;
         private TextView txt;
+        private String son[] = new String[getSetTestTopshiriqs.size()];
 
         public ViewTestTop(@NonNull View itemView) {
             super(itemView);
@@ -56,7 +57,12 @@ public class RecycTopshiriq extends RecyclerView.Adapter<RecycTopshiriq.ViewTest
             spinner = itemView.findViewById(R.id.spinnerID);
             txt = itemView.findViewById(R.id.txtSppiner);
 
-            ArrayAdapter<GetSetTestTopshiriq> adapter = new ArrayAdapter<GetSetTestTopshiriq>(context, android.R.layout.simple_list_item_1, getSetTestTopshiriqs);
+            for (int i = 0; i < getSetTestTopshiriqs.size(); i++) {
+
+                son[i] = getSetTestTopshiriqs.get(i).getName();
+
+            }
+            ArrayAdapter<String> adapter = new ArrayAdapter<String>(context, android.R.layout.simple_list_item_1, son);
             spinner.setAdapter(adapter);
         }
     }

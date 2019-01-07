@@ -4,7 +4,10 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Button;
+import android.widget.FrameLayout;
+
 import com.example.tojiy.myapplication.UNVERSALCLASS;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -22,12 +25,15 @@ public class ConHttpFoydali extends AsyncTask<String, Void, String> {
     private Context contxt;
     private RecyclerView rv;
     private Button button;
+    FrameLayout frameLayout;
+
     private String login_url = UNVERSALCLASS.url + UNVERSALCLASS.BUNDLE_URL;
 
-    public ConHttpFoydali(Context ctx, RecyclerView rv, Button button) {
+    public ConHttpFoydali(Context ctx, RecyclerView rv, Button button, FrameLayout frameLayout) {
         contxt = ctx;
         this.rv = rv;
         this.button = button;
+        this.frameLayout = frameLayout;
     }
 
     @Override
@@ -87,7 +93,7 @@ public class ConHttpFoydali extends AsyncTask<String, Void, String> {
 
         } else {
 
-            DataFoydali dataFoydali = new DataFoydali(contxt, rv, result);
+            DataFoydali dataFoydali = new DataFoydali(contxt, rv, result, frameLayout);
             dataFoydali.execute();
         }
 

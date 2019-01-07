@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.FrameLayout;
 
 import com.example.tojiy.myapplication.R;
 
@@ -17,6 +18,7 @@ public class FoydaliMalumot extends DialogFragment {
 
     private RecyclerView recyclerView;
     private Button button;
+    FrameLayout frameLayout;
 
     @Override
     public View onCreateView(LayoutInflater ii, ViewGroup container,
@@ -34,9 +36,9 @@ public class FoydaliMalumot extends DialogFragment {
                 dismiss();
             }
         });
+        frameLayout = view.findViewById(R.id.fragmentFoydali);
 
-
-        ConHttpFoydali conHttpFoydali = new ConHttpFoydali(getActivity().getApplicationContext(), recyclerView, button);
+        ConHttpFoydali conHttpFoydali = new ConHttpFoydali(getActivity().getApplicationContext(), recyclerView, button,frameLayout);
         conHttpFoydali.execute("bufoydaiioii123yuklash", "bir");
         return view;
     }

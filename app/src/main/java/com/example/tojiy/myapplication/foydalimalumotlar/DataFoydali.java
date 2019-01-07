@@ -3,6 +3,7 @@ package com.example.tojiy.myapplication.foydalimalumotlar;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.support.v7.widget.RecyclerView;
+import android.widget.FrameLayout;
 
 import com.example.tojiy.myapplication.UNVERSALCLASS;
 
@@ -17,13 +18,15 @@ public class DataFoydali extends AsyncTask<Void, Void, Integer> {
     private Context c;
     private RecyclerView rv;
     private String jsonData;
+    FrameLayout frameLayout;
 
     ArrayList<GetSetFoydali> getSetFoydalis = new ArrayList<>();
 
-    public DataFoydali(Context c, RecyclerView rv, String jsonData) {
+    public DataFoydali(Context c, RecyclerView rv, String jsonData, FrameLayout frameLayout) {
         this.c = c;
         this.rv = rv;
         this.jsonData = jsonData;
+        this.frameLayout = frameLayout;
     }
 
     @Override
@@ -36,8 +39,8 @@ public class DataFoydali extends AsyncTask<Void, Void, Integer> {
         super.onPostExecute(result);
 
         ///SHU YERDAN TEKSHIRIB OLAMAN OYNALAR KO'RINISHINI
-            RecycFoydali recycFoydali = new RecycFoydali(c, getSetFoydalis);
-            rv.setAdapter(recycFoydali);
+        RecycFoydali recycFoydali = new RecycFoydali(c, getSetFoydalis, frameLayout);
+        rv.setAdapter(recycFoydali);
 
     }
 
