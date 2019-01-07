@@ -25,7 +25,7 @@ public class ConHttpTestTop extends AsyncTask<String, Void, String> {
     private RecyclerView rv;
 
 
-    private String login_url = UNVERSALCLASS.url + UNVERSALCLASS.BUNDLE_URL;
+    private String login_url = UNVERSALCLASS.url + "testtopshiriqlari.php";
 
     public ConHttpTestTop(Context ctx, RecyclerView rv) {
 
