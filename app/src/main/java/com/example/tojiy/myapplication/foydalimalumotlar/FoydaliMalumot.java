@@ -38,7 +38,7 @@ public class FoydaliMalumot extends DialogFragment {
         });
         frameLayout = view.findViewById(R.id.fragmentFoydali);
 
-        ConHttpFoydali conHttpFoydali = new ConHttpFoydali(getActivity().getApplicationContext(), recyclerView, button,frameLayout);
+        ConHttpFoydali conHttpFoydali = new ConHttpFoydali(getActivity(), recyclerView, button,frameLayout);
         conHttpFoydali.execute("bufoydaiioii123yuklash", "bir");
         return view;
     }

@@ -59,6 +59,7 @@ public class DataTestTopshiriq extends AsyncTask<Void, Void, Integer> {
 
                 getSetTestTopshiriq = new GetSetTestTopshiriq();
                 getSetTestTopshiriq.setName(name);
+                getSetTestTopshiriq.setId(key);
                 getSetTestTopshiriq.setUrl(url);
                 getSetTestTopshiriqs.add(getSetTestTopshiriq);
             }

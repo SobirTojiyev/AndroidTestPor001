@@ -3,8 +3,8 @@ package com.example.tojiy.myapplication.foydalimalumotlar;
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -19,7 +19,10 @@ import com.example.tojiy.myapplication.UNVERSALCLASS;
 import com.example.tojiy.myapplication.foydalimalumotlar.javoblarvaraqasi.JavoblarTN;
 import com.example.tojiy.myapplication.foydalimalumotlar.testtopshiriqlari.TestTopshiriq1;
 import com.example.tojiy.myapplication.webview.WebViewClass;
+
 import java.util.ArrayList;
+
+import static android.view.View.INVISIBLE;
 
 public class RecycFoydali extends RecyclerView.Adapter<RecycFoydali.FoydaliHolder> {
 
@@ -58,25 +61,19 @@ public class RecycFoydali extends RecyclerView.Adapter<RecycFoydali.FoydaliHolde
                 }
                 if (getSetFoydalis.get(i).getUrl().trim().contains("123")) {
 
+//
 //                    frameLayout.setVisibility(INVISIBLE);
 //                    TestTopshiriq1 testTopshiriq12 = new TestTopshiriq1();
-//                    FragmentManager fragmentManager2 = ((AppCompatActivity) v.getContext()).getSupportFragmentManager();
+//                    FragmentManager fragmentManager2 =  (v.getContext().getApplicationContext()).getSupportFragmentManager();
 //                    testTopshiriq12.show(fragmentManager2, "blok");
-////                    v.getContext().startActivity(new Intent(v.getContext(), TestTopshiriq1.class));
-
-//
-//                    ((FragmentActivity) v.getContext()).getFragmentManager().beginTransaction()
-//                            .replace(R.id.fragmentFoydali, new TestTopshiriq1())
-//                            .commit();
-
-//                    AppCompatActivity activity = (AppCompatActivity) v.getContext();
-                    Fragment myFragment = new TestTopshiriq1();
-                    ((AppCompatActivity) v.getContext()).getSupportFragmentManager().beginTransaction().replace(R.id.fragmentFoydali, myFragment).addToBackStack(null).commit();
+                    FragmentActivity activity = (FragmentActivity)(context);
+                    FragmentManager fm = activity.getSupportFragmentManager();
+                    TestTopshiriq1 alertDialog = new TestTopshiriq1();
+                    alertDialog.show(fm, "fragment_alert");
 
                 }
 
 
-//                Toast.makeText(context, "" + getSetFoydalis.get(i).getUrl(), Toast.LENGTH_SHORT).show();
             }
         });
 
