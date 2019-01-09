@@ -14,14 +14,11 @@ import java.util.Iterator;
 public class DataTestTopshiriq extends AsyncTask<Void, Void, Integer> {
 
     private Context c;
-    private RecyclerView rv;
-    private Button button;
     private String jsonData;
     private ArrayList<GetSetTestTopshiriq> getSetTestTopshiriqs = new ArrayList<>();
 
-    public DataTestTopshiriq(Context c, RecyclerView rv, String jsonData) {
+    public DataTestTopshiriq(Context c, String jsonData) {
         this.c = c;
-        this.rv = rv;
         this.jsonData = jsonData;
     }
 
@@ -33,9 +30,9 @@ public class DataTestTopshiriq extends AsyncTask<Void, Void, Integer> {
     @Override
     protected void onPostExecute(Integer result) {
         super.onPostExecute(result);
-//
-         RecycTopshiriq recycTopshiriq = new RecycTopshiriq(c, getSetTestTopshiriqs);
-        rv.setAdapter(recycTopshiriq);
+
+//         RecycTopshiriq recycTopshiriq = new RecycTopshiriq(c, getSetTestTopshiriqs);
+//        rv.setAdapter(recycTopshiriq);
 
     }
 

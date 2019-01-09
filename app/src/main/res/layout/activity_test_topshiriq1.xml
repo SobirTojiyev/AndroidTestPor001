@@ -7,23 +7,73 @@
     android:orientation="vertical"
     tools:context=".foydalimalumotlar.testtopshiriqlari.TestTopshiriq1">
 
-
-    <TextView
-        android:id="@+id/txtTestTopshiriqlari"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="10dp"
-        android:gravity="center"
+        android:background="?attr/backgroundcolor"
+        android:orientation="horizontal">
 
-        android:text="@string/app_name" />
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyTestTopshiriq"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginLeft="2dp"
-        android:layout_marginRight="2dp" />
+        <TextView
+            android:id="@+id/txtTestTopshiriq1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp"
+            android:text="txtTestTopshiriq1"
+            android:textColor="?attr/textcolor" />
+
+        <Spinner
+            android:id="@+id/spinTestTopshiriq1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="8dp"
+            android:layout_toRightOf="@id/txtTestTopshiriq1"
+            android:textColor="?attr/textcolor">
+
+        </Spinner>
+
+        <TextView
+            android:id="@+id/txtTestTopshiriq2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtTestTopshiriq1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:text="txtTestTopshiriq2"
+            android:textColor="?attr/textcolor" />
+
+        <Spinner
+            android:id="@+id/spinTestTopshiriq2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spinTestTopshiriq1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@id/txtTestTopshiriq2"
+
+            android:textColor="?attr/textcolor">
+
+        </Spinner>
+
+        <Button
+            android:id="@+id/btnTestTopshiriq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtTestTopshiriq2"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            android:text="btn"
+
+            />
+    </RelativeLayout>
 
 
 </FrameLayout>

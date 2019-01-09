@@ -22,15 +22,13 @@ import java.net.URLEncoder;
 public class ConHttpTestTop extends AsyncTask<String, Void, String> {
 
     private Context contxt;
-    private RecyclerView rv;
 
 
     private String login_url = UNVERSALCLASS.url + "testtopshiriqlari.php";
 
-    public ConHttpTestTop(Context ctx, RecyclerView rv) {
+    public ConHttpTestTop(Context ctx) {
 
         contxt = ctx;
-        this.rv = rv;
 
     }
 
@@ -84,7 +82,7 @@ public class ConHttpTestTop extends AsyncTask<String, Void, String> {
     @Override
     public void onPostExecute(String result) {
 
-        DataTestTopshiriq dataTestTopshiriq = new DataTestTopshiriq(contxt, rv, result);
+        DataTestTopshiriq dataTestTopshiriq = new DataTestTopshiriq(contxt,  result);
         dataTestTopshiriq.execute();
 
 

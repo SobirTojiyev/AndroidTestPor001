@@ -3,48 +3,39 @@ package com.example.tojiy.myapplication.foydalimalumotlar.testtopshiriqlari;
 import android.content.Context;
 import android.support.v4.app.DialogFragment;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.example.tojiy.myapplication.R;
 
 public class TestTopshiriq1 extends DialogFragment {
 
-    private RecyclerView recyclerView;
     private Button button;
-
+    private Spinner sppin1, sppin2;
     private Context context;
+    private TextView txt1, txt2;
+
 
     @Override
     public View onCreateView(LayoutInflater ii, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = ii.inflate(R.layout.activity_test_topshiriq1, container, false);
+        View vi = ii.inflate(R.layout.activity_test_topshiriq1, container, false);
 
-        recyclerView = view.findViewById(R.id.recyTestTopshiriq);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this.getActivity()));
+        ConHttpTestTop conHttpTestTop = new ConHttpTestTop(context);
+        conHttpTestTop.execute("bufo7245yuklash", "kalit");
 
-        ConHttpTestTop conHttpTestTop = new ConHttpTestTop(context,recyclerView);
-        conHttpTestTop.execute("bufo7245yuklash","kalit");
-        return view;
+        sppin1 = vi.findViewById(R.id.spinTestTopshiriq1);
+        sppin2 = vi.findViewById(R.id.spinTestTopshiriq2);
+
+        txt1 = vi.findViewById(R.id.txtTestTopshiriq1);
+        txt2 = vi.findViewById(R.id.txtTestTopshiriq2);
+
+
+
+        return vi;
     }
-
 }
-
-
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_test_topshiriq1);
-//        recyclerView = findViewById(R.id.recyTestTopshiriq);
-//        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-//
-//        ConHttpTestTop conHttpTestTop = new ConHttpTestTop(getApplication().getApplicationContext(), recyclerView);
-//        conHttpTestTop.execute("bufo7245yuklash", "kalit");
-//
-//    }
-
-//}
