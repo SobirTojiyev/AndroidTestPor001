@@ -6,18 +6,27 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.example.tojiy.myapplication.R;
 
 public class Mosfanlar1 extends DialogFragment {
 
 
+    private Spinner spinner;
+    private TextView txtMasofa;
+
+
     @Override
     public View onCreateView(LayoutInflater ii, ViewGroup container,
                              Bundle savedInstanceState) {
-        View vi = ii.inflate(R.layout.activity_mosfanlar1, container, false);
+        View vim = ii.inflate(R.layout.activity_mosfanlar1, container, false);
+        txtMasofa = vim.findViewById(R.id.txtMasofa);
+        spinner = vim.findViewById(R.id.spinnMasofa);
 
-        return vi;
+
+        return vim;
     }
 //    @Override
 //    protected void onCreate(Bundle savedInstanceState) {

@@ -1,6 +1,7 @@
 package com.example.tojiy.myapplication.foydalimalumotlar.testtopshiriqlari;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v4.app.DialogFragment;
 import android.os.Bundle;
 import android.util.Log;
@@ -58,14 +59,15 @@ public class TestTopshiriq1 extends DialogFragment {
         ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(getActivity().getApplicationContext(), android.R.layout.simple_spinner_item, spin1);
         sppin1.setAdapter(adapter1);
         ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(getActivity().getApplicationContext(), android.R.layout.simple_spinner_item, spin2);
-        sppin2  .setAdapter(adapter2);
+        sppin2.setAdapter(adapter2);
         txt1 = vi.findViewById(R.id.txtTestTopshiriq1);
         txt2 = vi.findViewById(R.id.txtTestTopshiriq2);
         button = vi.findViewById(R.id.btnTestTopshiriq);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                startActivity(new Intent(getActivity().getApplicationContext(), TesttopshiriqPDF.class));
+                dismiss();
             }
         });
 
