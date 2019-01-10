@@ -27,7 +27,10 @@
         <activity android:name=".foydalimalumotlar.testtopshiriqlari.TestTopshiriq1" />
         <activity android:name=".foydalimalumotlar.javoblarvaraqasi.JavoblarTN" />
         <activity android:name=".foydalimalumotlar.testtopshiriqlari.TesttopshiriqPDF" />
-        <activity android:name=".foydalimalumotlar.mosfanlar.Mosfanlar1"></activity>
+        <activity android:name=".foydalimalumotlar.mosfanlar.Mosfanlar1" />
+        <activity android:name=".foydalimalumotlar.mosfanlar.MosfanActivityPDF" />
+        <activity android:name=".foydalimalumotlar.otishballari.Otishbalar" />
+        <activity android:name=".foydalimalumotlar.otishballari.OtishballarPDF"></activity>
     </application>
 
 </manifest>

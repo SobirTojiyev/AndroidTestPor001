@@ -1,5 +1,7 @@
-package com.example.tojiy.myapplication.foydalimalumotlar.mosfanlar;
+package com.example.tojiy.myapplication.foydalimalumotlar.otishballari;
 
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,19 +11,20 @@ import android.view.ViewGroup;
 
 import com.example.tojiy.myapplication.R;
 
-public class Mosfanlar1 extends DialogFragment {
+public class Otishbalar extends DialogFragment {
 
 
     @Override
     public View onCreateView(LayoutInflater ii, ViewGroup container,
                              Bundle savedInstanceState) {
-        View vi = ii.inflate(R.layout.activity_mosfanlar1, container, false);
+        View vi = ii.inflate(R.layout.activity_otishbalar, container, false);
 
         return vi;
     }
-//    @Override
+
+    //    @Override
 //    protected void onCreate(Bundle savedInstanceState) {
 //        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_mosfanlar1);
+//        setContentView(R.layout.activity_otishbalar);
 //    }
-    }
+}
