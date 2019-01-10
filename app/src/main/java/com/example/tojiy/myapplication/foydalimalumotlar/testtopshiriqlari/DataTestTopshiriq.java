@@ -2,6 +2,8 @@ package com.example.tojiy.myapplication.foydalimalumotlar.testtopshiriqlari;
 
 import android.content.Context;
 import android.os.AsyncTask;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Button;
 
@@ -30,6 +32,13 @@ public class DataTestTopshiriq extends AsyncTask<Void, Void, Integer> {
     @Override
     protected void onPostExecute(Integer result) {
         super.onPostExecute(result);
+
+        FragmentActivity activity = (FragmentActivity) (c);
+        FragmentManager fm = activity.getSupportFragmentManager();
+        TestTopshiriq1 alertDialog = new TestTopshiriq1();
+        alertDialog.show(fm, "fragment_alert");
+        alertDialog.setGetSetTestTopshiriqs(getSetTestTopshiriqs);
+
 
 //         RecycTopshiriq recycTopshiriq = new RecycTopshiriq(c, getSetTestTopshiriqs);
 //        rv.setAdapter(recycTopshiriq);

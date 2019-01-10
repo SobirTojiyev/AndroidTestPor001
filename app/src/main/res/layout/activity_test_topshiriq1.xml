@@ -70,7 +70,7 @@
             android:layout_below="@id/txtTestTopshiriq2"
             android:layout_centerHorizontal="true"
             android:layout_margin="20dp"
-            android:text="btn"
+            android:text="@string/ko_rish"
 
             />
     </RelativeLayout>

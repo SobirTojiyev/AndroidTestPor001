@@ -17,12 +17,12 @@ import android.widget.Toast;
 import com.example.tojiy.myapplication.R;
 import com.example.tojiy.myapplication.UNVERSALCLASS;
 import com.example.tojiy.myapplication.foydalimalumotlar.javoblarvaraqasi.JavoblarTN;
+import com.example.tojiy.myapplication.foydalimalumotlar.testtopshiriqlari.ConHttpTestTop;
 import com.example.tojiy.myapplication.foydalimalumotlar.testtopshiriqlari.TestTopshiriq1;
 import com.example.tojiy.myapplication.webview.WebViewClass;
 
 import java.util.ArrayList;
 
-import static android.view.View.INVISIBLE;
 
 public class RecycFoydali extends RecyclerView.Adapter<RecycFoydali.FoydaliHolder> {
 
@@ -66,10 +66,9 @@ public class RecycFoydali extends RecyclerView.Adapter<RecycFoydali.FoydaliHolde
 //                    TestTopshiriq1 testTopshiriq12 = new TestTopshiriq1();
 //                    FragmentManager fragmentManager2 =  (v.getContext().getApplicationContext()).getSupportFragmentManager();
 //                    testTopshiriq12.show(fragmentManager2, "blok");
-                    FragmentActivity activity = (FragmentActivity)(context);
-                    FragmentManager fm = activity.getSupportFragmentManager();
-                    TestTopshiriq1 alertDialog = new TestTopshiriq1();
-                    alertDialog.show(fm, "fragment_alert");
+                                       ConHttpTestTop conHttpTestTop = new ConHttpTestTop(context);
+                    conHttpTestTop.execute("bufo7245yuklash","kalit");
+
 
                 }
 

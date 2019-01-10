@@ -3,6 +3,7 @@ package com.example.tojiy.myapplication.foydalimalumotlar.testtopshiriqlari;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.widget.Button;
 
 import com.example.tojiy.myapplication.UNVERSALCLASS;
@@ -41,7 +42,6 @@ public class ConHttpTestTop extends AsyncTask<String, Void, String> {
             try {
 
                 String stolid = params[1];
-
 
                 URL url = new URL(login_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
@@ -82,7 +82,7 @@ public class ConHttpTestTop extends AsyncTask<String, Void, String> {
     @Override
     public void onPostExecute(String result) {
 
-        DataTestTopshiriq dataTestTopshiriq = new DataTestTopshiriq(contxt,  result);
+        DataTestTopshiriq dataTestTopshiriq = new DataTestTopshiriq(contxt, result);
         dataTestTopshiriq.execute();
 
 
