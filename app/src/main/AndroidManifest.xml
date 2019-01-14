@@ -30,7 +30,8 @@
         <activity android:name=".foydalimalumotlar.mosfanlar.Mosfanlar1" />
         <activity android:name=".foydalimalumotlar.mosfanlar.MosfanActivityPDF" />
         <activity android:name=".foydalimalumotlar.otishballari.Otishbalar" />
-        <activity android:name=".foydalimalumotlar.otishballari.OtishballarPDF"></activity>
+        <activity android:name=".foydalimalumotlar.otishballari.OtishballarPDF" />
+        <activity android:name=".foydalimalumotlar.tasdiqdarsliklar.Tasdiqlangandarslik"></activity>
     </application>
 
 </manifest>

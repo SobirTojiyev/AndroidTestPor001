@@ -6,4 +6,64 @@
     android:layout_height="match_parent"
     tools:context=".foydalimalumotlar.otishballari.Otishbalar">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+
+            <Spinner
+                android:layout_margin="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </Spinner>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </Spinner>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </Spinner>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </Spinner>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
 </FrameLayout>

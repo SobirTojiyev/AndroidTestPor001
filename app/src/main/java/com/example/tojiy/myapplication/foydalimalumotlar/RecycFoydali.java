@@ -60,16 +60,16 @@ public class RecycFoydali extends RecyclerView.Adapter<RecycFoydali.FoydaliHolde
                     v.getContext().startActivity(new Intent(v.getContext(), WebViewClass.class));
                 }
                 if (getSetFoydalis.get(i).getUrl().trim().contains("123")) {
-
-//
 //                    frameLayout.setVisibility(INVISIBLE);
-//                    TestTopshiriq1 testTopshiriq12 = new TestTopshiriq1();
-//                    FragmentManager fragmentManager2 =  (v.getContext().getApplicationContext()).getSupportFragmentManager();
-//                    testTopshiriq12.show(fragmentManager2, "blok");
-                                       ConHttpTestTop conHttpTestTop = new ConHttpTestTop(context);
-                    conHttpTestTop.execute("bufo7245yuklash","kalit");
 
-
+                    ConHttpTestTop conHttpTestTop = new ConHttpTestTop(context);
+                    conHttpTestTop.execute("bufo7245yuklash", "kalit");
+//
+//                    FragmentActivity activity = (FragmentActivity) (context);
+//                    FragmentManager fragmentManager = activity.getSupportFragmentManager();
+//                    TestTopshiriq1 testTopshiriq1 = new TestTopshiriq1();
+//                    testTopshiriq1.show(fragmentManager, "kalit");
+//
                 }
 
 

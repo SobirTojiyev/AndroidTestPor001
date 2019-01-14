@@ -7,34 +7,35 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+//--- o'chirish mumkin
 
-public class SppinerAdapter extends ArrayAdapter {
+//public class SppinerAdapter extends ArrayAdapter {
+//
+//    private Context context;
+//    private int textViewResurceId;
+//    private String[] objects;
+//    private static boolean flag = false;
+//
+//    public SppinerAdapter(Context context, int textViewResurceId, String[] objects) {
+//        super(context, textViewResurceId, objects);
+//        this.context = context;
+//        this.textViewResurceId = textViewResurceId;
+//        this.objects = objects;
+//    }
+//    @Override
+//    public View getView(int position, View convertView, ViewGroup parent) {
+//        if (convertView == null)
+//            convertView = View.inflate(context, textViewResurceId, null);
+//        if (flag != false) {
+//            TextView tv = (TextView) convertView;
+//            tv.setText(objects[position]);
+//        }
+//        return convertView;
+//    }
+//
 
-    private Context context;
-    private int textViewResurceId;
-    private String[] objects;
-    private static boolean flag = false;
-
-    public SppinerAdapter(Context context, int textViewResurceId, String[] objects) {
-        super(context, textViewResurceId, objects);
-        this.context = context;
-        this.textViewResurceId = textViewResurceId;
-        this.objects = objects;
-    }
-    @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        if (convertView == null)
-            convertView = View.inflate(context, textViewResurceId, null);
-        if (flag != false) {
-            TextView tv = (TextView) convertView;
-            tv.setText(objects[position]);
-        }
-        return convertView;
-    }
 
 
-
-
-}
+//}
 
 

@@ -1,11 +1,7 @@
-package com.example.tojiy.myapplication.foydalimalumotlar.testtopshiriqlari;
+package com.example.tojiy.myapplication.foydalimalumotlar.tasdiqdarsliklar;
 
 import android.content.Context;
 import android.os.AsyncTask;
-import android.support.v7.widget.RecyclerView;
-import android.util.Log;
-import android.widget.Button;
-import android.widget.Toast;
 
 import com.example.tojiy.myapplication.UNVERSALCLASS;
 
@@ -21,14 +17,14 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
 
-public class ConHttpTestTop extends AsyncTask<String, Void, String> {
+public class ConnTasdiqlangandarslik  extends AsyncTask<String, Void, String> {
 
     private Context contxt;
 
 
     private String login_url = UNVERSALCLASS.url + "testtopshiriqlari.php";
 
-    public ConHttpTestTop(Context ctx) {
+    public ConnTasdiqlangandarslik(Context ctx) {
 
         contxt = ctx;
 

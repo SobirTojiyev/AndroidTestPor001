@@ -39,30 +39,38 @@ public class TestTopshiriq1 extends DialogFragment {
     @Override
     public View onCreateView(LayoutInflater ii, ViewGroup container,
                              Bundle savedInstanceState) {
+
+
         View vi = ii.inflate(R.layout.activity_test_topshiriq1, container, false);
+
+        sppin1 = vi.findViewById(R.id.spinTestTopshiriq1);
+        sppin2 = vi.findViewById(R.id.spinTestTopshiriq2);
+        txt1 = vi.findViewById(R.id.txtTestTopshiriq1);
+        txt2 = vi.findViewById(R.id.txtTestTopshiriq2);
+        button = vi.findViewById(R.id.btnTestTopshiriq);
 
 
         String[] spin1 = new String[getGetSetTestTopshiriqs().size()],
-
+//
                 spin2 = new String[getGetSetTestTopshiriqs().size()];
 
         for (int i = 0; i < getGetSetTestTopshiriqs().size(); i++) {
 
             spin1[i] = getGetSetTestTopshiriqs().get(i).getName();
+
+//            if (getGetSetTestTopshiriqs().get(i).getUrl().length() > 0)
             spin2[i] = getGetSetTestTopshiriqs().get(i).getUrl();
 //            Log.v("GOLD", getGetSetTestTopshiriqs().get(i).getId());
         }
 
-
-        sppin1 = vi.findViewById(R.id.spinTestTopshiriq1);
-        sppin2 = vi.findViewById(R.id.spinTestTopshiriq2);
         ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(getActivity().getApplicationContext(), android.R.layout.simple_spinner_item, spin1);
         sppin1.setAdapter(adapter1);
         ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(getActivity().getApplicationContext(), android.R.layout.simple_spinner_item, spin2);
         sppin2.setAdapter(adapter2);
-        txt1 = vi.findViewById(R.id.txtTestTopshiriq1);
-        txt2 = vi.findViewById(R.id.txtTestTopshiriq2);
-        button = vi.findViewById(R.id.btnTestTopshiriq);
+
+        txt1.setText(getSetTestTopshiriqs.get(0).getName());
+        txt2.setText(getSetTestTopshiriqs.get(1).getName());
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

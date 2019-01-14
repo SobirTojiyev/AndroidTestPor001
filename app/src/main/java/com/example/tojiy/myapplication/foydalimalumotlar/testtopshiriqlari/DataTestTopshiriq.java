@@ -33,11 +33,14 @@ public class DataTestTopshiriq extends AsyncTask<Void, Void, Integer> {
     protected void onPostExecute(Integer result) {
         super.onPostExecute(result);
 
+
         FragmentActivity activity = (FragmentActivity) (c);
         FragmentManager fm = activity.getSupportFragmentManager();
+
         TestTopshiriq1 alertDialog = new TestTopshiriq1();
-        alertDialog.show(fm, "fragment_alert");
         alertDialog.setGetSetTestTopshiriqs(getSetTestTopshiriqs);
+        alertDialog.show(fm, "fragment_alert");
+
 
 
 //         RecycTopshiriq recycTopshiriq = new RecycTopshiriq(c, getSetTestTopshiriqs);
