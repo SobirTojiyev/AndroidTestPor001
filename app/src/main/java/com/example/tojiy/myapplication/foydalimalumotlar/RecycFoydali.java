@@ -17,6 +17,7 @@ import android.widget.Toast;
 import com.example.tojiy.myapplication.R;
 import com.example.tojiy.myapplication.UNVERSALCLASS;
 import com.example.tojiy.myapplication.foydalimalumotlar.javoblarvaraqasi.JavoblarTN;
+import com.example.tojiy.myapplication.foydalimalumotlar.tasdiqdarsliklar.ConnTasdiqlangandarslik;
 import com.example.tojiy.myapplication.foydalimalumotlar.testtopshiriqlari.ConHttpTestTop;
 import com.example.tojiy.myapplication.foydalimalumotlar.testtopshiriqlari.TestTopshiriq1;
 import com.example.tojiy.myapplication.webview.WebViewClass;
@@ -60,16 +61,14 @@ public class RecycFoydali extends RecyclerView.Adapter<RecycFoydali.FoydaliHolde
                     v.getContext().startActivity(new Intent(v.getContext(), WebViewClass.class));
                 }
                 if (getSetFoydalis.get(i).getUrl().trim().contains("123")) {
-//                    frameLayout.setVisibility(INVISIBLE);
 
                     ConHttpTestTop conHttpTestTop = new ConHttpTestTop(context);
                     conHttpTestTop.execute("bufo7245yuklash", "kalit");
-//
-//                    FragmentActivity activity = (FragmentActivity) (context);
-//                    FragmentManager fragmentManager = activity.getSupportFragmentManager();
-//                    TestTopshiriq1 testTopshiriq1 = new TestTopshiriq1();
-//                    testTopshiriq1.show(fragmentManager, "kalit");
-//
+                }
+                if (getSetFoydalis.get(i).getUrl().trim().contains("tasdiqlangan")) {
+
+                    ConnTasdiqlangandarslik connTasdiqlangandarslik = new ConnTasdiqlangandarslik(context);
+                    connTasdiqlangandarslik.execute("asdsdfgxzcvAEF","kalit");
                 }
 
 

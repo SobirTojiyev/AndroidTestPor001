@@ -1,9 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".foydalimalumotlar.tasdiqdarsliklar.Tasdiqlangandarslik">
 
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/txtTasdiqlangan1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="?attr/textcolor"
+            android:text="txtTasdiqlangan1" />
+
+        <Spinner
+            android:id="@+id/spinTasdiqlangan1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="8dp"
+            android:layout_toRightOf="@id/txtTasdiqlangan1">
+
+        </Spinner>
+
+        <TextView
+            android:id="@+id/txtTasdiqlangan2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtTasdiqlangan1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:text="txtTasdiqlangan2"
+            android:textColor="?attr/textcolor" />
+
+        <Spinner
+            android:id="@+id/spinTasdiqlangan2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spinTasdiqlangan1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@id/txtTasdiqlangan2"
+            android:textColor="?attr/textcolor">
+
+        </Spinner>
+
+        <Button
+            android:id="@+id/btnTasdiqlangan"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@id/txtTasdiqlangan2"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            android:text="@string/ko_rish" />
+    </RelativeLayout>
+
+
+</FrameLayout>

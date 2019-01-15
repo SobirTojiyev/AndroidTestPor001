@@ -2,6 +2,7 @@ package com.example.tojiy.myapplication.foydalimalumotlar.tasdiqdarsliklar;
 
 import android.content.Context;
 import android.os.AsyncTask;
+import android.widget.Toast;
 
 import com.example.tojiy.myapplication.UNVERSALCLASS;
 
@@ -17,12 +18,12 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
 
-public class ConnTasdiqlangandarslik  extends AsyncTask<String, Void, String> {
+public class ConnTasdiqlangandarslik extends AsyncTask<String, Void, String> {
 
     private Context contxt;
 
 
-    private String login_url = UNVERSALCLASS.url + "testtopshiriqlari.php";
+    private String login_url = UNVERSALCLASS.url + "tasdiqlangandarslik.php";
 
     public ConnTasdiqlangandarslik(Context ctx) {
 
@@ -34,7 +35,7 @@ public class ConnTasdiqlangandarslik  extends AsyncTask<String, Void, String> {
     protected String doInBackground(String... params) {
         String type = params[0];
 
-        if (type.equals("bufo7245yuklash")) {
+        if (type.equals("asdsdfgxzcvAEF")) {
 
             try {
 
@@ -78,10 +79,10 @@ public class ConnTasdiqlangandarslik  extends AsyncTask<String, Void, String> {
 
     @Override
     public void onPostExecute(String result) {
-
-        DataTestTopshiriq dataTestTopshiriq = new DataTestTopshiriq(contxt, result);
-        dataTestTopshiriq.execute();
-
+//
+        DataTasdiqlangan dataTasdiqlangan = new DataTasdiqlangan(contxt, result);
+        dataTasdiqlangan.execute();
+        Toast.makeText(contxt, result, Toast.LENGTH_SHORT).show();
     }
 
 }
