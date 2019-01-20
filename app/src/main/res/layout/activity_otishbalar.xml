@@ -20,12 +20,16 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/btn2017"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:text="2017" />
 
             <Button
+                android:id="@+id/btn2018"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:text="2018" />
 
 
         </LinearLayout>
@@ -38,27 +42,34 @@
 
 
             <Spinner
-                android:layout_margin="3dp"
+                android:id="@+id/spinnHududTanlash"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp">
 
             </Spinner>
 
             <Spinner
+                android:id="@+id/spinnTalimuassasa"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp">
 
             </Spinner>
 
             <Spinner
+                android:id="@+id/spinnTalimshakl"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp">
 
             </Spinner>
 
             <Spinner
+                android:id="@+id/spinnTalimtili"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp">
 
             </Spinner>
 

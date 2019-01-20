@@ -31,7 +31,9 @@
         <activity android:name=".foydalimalumotlar.mosfanlar.MosfanActivityPDF" />
         <activity android:name=".foydalimalumotlar.otishballari.Otishbalar" />
         <activity android:name=".foydalimalumotlar.otishballari.OtishballarPDF" />
-        <activity android:name=".foydalimalumotlar.tasdiqdarsliklar.Tasdiqlangandarslik"></activity>
+        <activity android:name=".foydalimalumotlar.tasdiqdarsliklar.Tasdiqlangandarslik" />
+        <activity android:name=".foydalimalumotlar.tasdiqdarsliklar.TasdiqlanganPDF" />
+        <activity android:name=".foydalimalumotlar.talimyonalishi.Talimyonalishi"></activity>
     </application>
 
 </manifest>

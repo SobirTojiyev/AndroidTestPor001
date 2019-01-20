@@ -17,6 +17,8 @@ import android.widget.Toast;
 import com.example.tojiy.myapplication.R;
 import com.example.tojiy.myapplication.UNVERSALCLASS;
 import com.example.tojiy.myapplication.foydalimalumotlar.javoblarvaraqasi.JavoblarTN;
+import com.example.tojiy.myapplication.foydalimalumotlar.mosfanlar.ConnMosfan;
+import com.example.tojiy.myapplication.foydalimalumotlar.otishballari.ConnOtishbalar;
 import com.example.tojiy.myapplication.foydalimalumotlar.tasdiqdarsliklar.ConnTasdiqlangandarslik;
 import com.example.tojiy.myapplication.foydalimalumotlar.testtopshiriqlari.ConHttpTestTop;
 import com.example.tojiy.myapplication.foydalimalumotlar.testtopshiriqlari.TestTopshiriq1;
@@ -68,9 +70,18 @@ public class RecycFoydali extends RecyclerView.Adapter<RecycFoydali.FoydaliHolde
                 if (getSetFoydalis.get(i).getUrl().trim().contains("tasdiqlangan")) {
 
                     ConnTasdiqlangandarslik connTasdiqlangandarslik = new ConnTasdiqlangandarslik(context);
-                    connTasdiqlangandarslik.execute("asdsdfgxzcvAEF","kalit");
+                    connTasdiqlangandarslik.execute("asdsdfgxzcvAEF", "kalit");
                 }
+                if (getSetFoydalis.get(i).getUrl().trim().contains("talimyonalish")) {
 
+                    ConnMosfan connMosfan = new ConnMosfan(context);
+                    connMosfan.execute("amosfansdsdfgxzcvAEF", "kalit");
+                }
+                if (getSetFoydalis.get(i).getUrl().trim().contains("otishballari")) {
+
+                    ConnOtishbalar connOtishbalar = new ConnOtishbalar(context);
+                    connOtishbalar.execute("aotishballnsdsdfgxzcvAEF","kalit");
+                }
 
             }
         });

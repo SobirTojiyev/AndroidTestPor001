@@ -82,7 +82,7 @@ public class ConnTasdiqlangandarslik extends AsyncTask<String, Void, String> {
 //
         DataTasdiqlangan dataTasdiqlangan = new DataTasdiqlangan(contxt, result);
         dataTasdiqlangan.execute();
-        Toast.makeText(contxt, result, Toast.LENGTH_SHORT).show();
+//        Toast.makeText(contxt, result, Toast.LENGTH_SHORT).show();
     }
 
 }

@@ -41,11 +41,6 @@ public class DataTestTopshiriq extends AsyncTask<Void, Void, Integer> {
         alertDialog.setGetSetTestTopshiriqs(getSetTestTopshiriqs);
         alertDialog.show(fm, "fragment_alert");
 
-
-
-//         RecycTopshiriq recycTopshiriq = new RecycTopshiriq(c, getSetTestTopshiriqs);
-//        rv.setAdapter(recycTopshiriq);
-
     }
 
     private int parserData() {
