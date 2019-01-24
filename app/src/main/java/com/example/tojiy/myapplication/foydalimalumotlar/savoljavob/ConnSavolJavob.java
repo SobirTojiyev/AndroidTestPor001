@@ -5,6 +5,7 @@ import android.os.AsyncTask;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 
 import com.example.tojiy.myapplication.UNVERSALCLASS;
 
@@ -88,6 +89,7 @@ public class ConnSavolJavob extends AsyncTask<String, Void, String> {
         DataSavolJavob dataSavolJavob = new DataSavolJavob(contxt, rv, result);
         dataSavolJavob.execute();
 
+        Toast.makeText(contxt, "" + result, Toast.LENGTH_SHORT).show();
 
     }
 

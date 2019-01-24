@@ -37,8 +37,8 @@ public class DataSavolJavob extends AsyncTask<Void, Void, Integer> {
         super.onPostExecute(result);
 
         ///SHU YERDAN TEKSHIRIB OLAMAN OYNALAR KO'RINISHINI
-        RecycSavolJavob recycOnlineTest = new RecycSavolJavob(c, getSetSavolJavobArrayList);
-        rv.setAdapter(recycOnlineTest);
+        RecycSavolJavob recycSavolJavob = new RecycSavolJavob(c, getSetSavolJavobArrayList);
+        rv.setAdapter(recycSavolJavob);
 
     }
 
@@ -59,8 +59,8 @@ public class DataSavolJavob extends AsyncTask<Void, Void, Integer> {
 
                 setSavolJavob = new GetSetSavolJavob();
 
-                String name = jo.getString("name");
-                setSavolJavob.setTxt(name);
+//                String name = jo.getString("name");
+                setSavolJavob.setTxt(key);
                 getSetSavolJavobArrayList.add(setSavolJavob);
             }
 

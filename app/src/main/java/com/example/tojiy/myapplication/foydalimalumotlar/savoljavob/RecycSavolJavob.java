@@ -28,7 +28,7 @@ public class RecycSavolJavob extends RecyclerView.Adapter<RecycSavolJavob.ViewSa
     @Override
     public ViewSavolJavob onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
 
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.model_savoljavob, viewGroup, false);
+        View view = LayoutInflater.from(viewGroup.getContext().getApplicationContext()).inflate(R.layout.model_savoljavob, viewGroup, false);
         return new ViewSavolJavob(view);
     }
 
@@ -36,7 +36,11 @@ public class RecycSavolJavob extends RecyclerView.Adapter<RecycSavolJavob.ViewSa
     public void onBindViewHolder(@NonNull ViewSavolJavob vie, int i) {
 
 
-        expandableTextView.setText(getSetSavolJavobs.get(i).getTxt());
+        expandableTextView.setText("Javoblar varaqasi bu test topshiriqlari kitobidagi" +
+                " har bir topshiriqning bajarilishi" +
+                " natijasida tanlagan javobning bittasini belgilashga" +
+                " mo‘ljallangan va abituriyentning bilimini baholash " +
+                "uchun asos hisoblanadigan yagona hujjat.");
     }
 
     @Override
@@ -53,7 +57,7 @@ public class RecycSavolJavob extends RecyclerView.Adapter<RecycSavolJavob.ViewSa
 
         public ViewSavolJavob(@NonNull View itemView) {
             super(itemView);
-            expandableTextView = itemView.findViewById(R.id.expandableTextView);
+            expandableTextView = itemView.findViewById(R.id.expandable_text_view);
 
 
         }
