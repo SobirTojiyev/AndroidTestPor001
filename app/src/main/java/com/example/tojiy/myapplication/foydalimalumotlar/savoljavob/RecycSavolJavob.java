@@ -64,8 +64,3 @@ public class RecycSavolJavob extends RecyclerView.Adapter<RecycSavolJavob.ViewSa
     }
 
 }
-
-
-
-
-
