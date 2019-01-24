@@ -24,16 +24,19 @@
         <activity android:name=".search.Search123" />
         <activity android:name=".open_list.Opener" />
         <activity android:name=".webview.WebViewClass" />
-        <activity android:name=".foydalimalumotlar.testtopshiriqlari.TestTopshiriq1" />
+        <!--<activity android:name=".foydalimalumotlar.testtopshiriqlari.TestTopshiriq1" />-->
         <activity android:name=".foydalimalumotlar.javoblarvaraqasi.JavoblarTN" />
         <activity android:name=".foydalimalumotlar.testtopshiriqlari.TesttopshiriqPDF" />
-        <activity android:name=".foydalimalumotlar.mosfanlar.Mosfanlar1" />
+        <!--<activity android:name=".foydalimalumotlar.mosfanlar.Mosfanlar1" />-->
         <activity android:name=".foydalimalumotlar.mosfanlar.MosfanActivityPDF" />
-        <activity android:name=".foydalimalumotlar.otishballari.Otishbalar" />
+        <!--<activity android:name=".foydalimalumotlar.otishballari.Otishbalar" />-->
         <activity android:name=".foydalimalumotlar.otishballari.OtishballarPDF" />
-        <activity android:name=".foydalimalumotlar.tasdiqdarsliklar.Tasdiqlangandarslik" />
+        <!--<activity android:name=".foydalimalumotlar.tasdiqdarsliklar.Tasdiqlangandarslik" />-->
         <activity android:name=".foydalimalumotlar.tasdiqdarsliklar.TasdiqlanganPDF" />
-        <activity android:name=".foydalimalumotlar.talimyonalishi.Talimyonalishi"></activity>
+        <!--<activity android:name=".foydalimalumotlar.talimyonalishi.Talimyonalishi" />-->
+        <activity android:name=".foydalimalumotlar.savoljavob.SavolJavob">
+
+        </activity>
     </application>
 
 </manifest>

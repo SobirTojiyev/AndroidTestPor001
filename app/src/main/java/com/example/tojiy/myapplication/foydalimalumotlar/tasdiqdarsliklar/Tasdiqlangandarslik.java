@@ -48,6 +48,7 @@ public class Tasdiqlangandarslik extends DialogFragment {
             spin1[i] = getGetSetTasdiqlangans().get(i).getName();
             spin2[i] = getGetSetTasdiqlangans().get(i).getUzb();
         }
+
         ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(getActivity().getApplicationContext(), android.R.layout.simple_spinner_item, spin1);
         spinn1.setAdapter(adapter1);
 

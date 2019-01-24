@@ -1,8 +1,10 @@
-package com.example.tojiy.myapplication.foydalimalumotlar.tasdiqdarsliklar;
+package com.example.tojiy.myapplication.foydalimalumotlar.savoljavob;
 
 import android.content.Context;
 import android.os.AsyncTask;
-import android.widget.Toast;
+import android.support.v7.widget.RecyclerView;
+import android.widget.Button;
+import android.widget.FrameLayout;
 
 import com.example.tojiy.myapplication.UNVERSALCLASS;
 
@@ -17,34 +19,32 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
-import java.nio.charset.Charset;
 
-import static java.nio.charset.StandardCharsets.UTF_8;
-import static java.time.temporal.WeekFields.ISO;
-
-public class ConnTasdiqlangandarslik extends AsyncTask<String, Void, String> {
+public class ConnSavolJavob extends AsyncTask<String, Void, String> {
 
     private Context contxt;
+    private RecyclerView rv;
 
-    private static final Charset UTF_8 = Charset.forName("UTF-8");
-    private static final Charset ISO = Charset.forName("ISO-8859-1");
+
+//    private String login_url = UNVERSALCLASS.url + UNVERSALCLASS.BUNDLE_URL;
+
     private String login_url = UNVERSALCLASS.url + "tasdiqlangandarslik.php";
 
-    public ConnTasdiqlangandarslik(Context ctx) {
-
+    public ConnSavolJavob(Context ctx, RecyclerView rv) {
         contxt = ctx;
-
+        this.rv = rv;
     }
 
     @Override
     protected String doInBackground(String... params) {
         String type = params[0];
 
-        if (type.equals("asdsdfgxzcvAEF")) {
+        if (type.equals("busavoljavoboii123yuklash")) {
 
             try {
 
                 String stolid = params[1];
+
 
                 URL url = new URL(login_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
@@ -84,11 +84,11 @@ public class ConnTasdiqlangandarslik extends AsyncTask<String, Void, String> {
 
     @Override
     public void onPostExecute(String result) {
-//
-        String text1 = new String(result.getBytes(ISO), UTF_8);
-        DataTasdiqlangan dataTasdiqlangan = new DataTasdiqlangan(contxt, text1);
-        dataTasdiqlangan.execute();
-//        Toast.makeText(contxt, result, Toast.LENGTH_SHORT).show();
+
+        DataSavolJavob dataSavolJavob = new DataSavolJavob(contxt, rv, result);
+        dataSavolJavob.execute();
+
+
     }
 
 }

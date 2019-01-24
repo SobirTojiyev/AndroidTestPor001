@@ -2,6 +2,7 @@ package com.example.tojiy.myapplication.foydalimalumotlar.otishballari;
 
 import android.content.Context;
 import android.os.AsyncTask;
+import android.widget.Toast;
 
 import com.example.tojiy.myapplication.UNVERSALCLASS;
 
@@ -16,13 +17,15 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.nio.charset.Charset;
 
 public class ConnOtishbalar extends AsyncTask<String, Void, String> {
 
     private Context contxt;
+    private static final Charset ISO = Charset.forName("ISO-8859-1");
+    private static final Charset UTF_8 = Charset.forName("UTF-8");
 
-
-    private String login_url = UNVERSALCLASS.url + "otishballari.php";
+    private String login_url = UNVERSALCLASS.url + "abc.json";
 
     public ConnOtishbalar(Context ctx) {
 
@@ -78,9 +81,10 @@ public class ConnOtishbalar extends AsyncTask<String, Void, String> {
 
     @Override
     public void onPostExecute(String result) {
-
-//        DataOtishbalar dataOtishbalar = new DataOtishbalar();
-//        dataOtishbalar.
+        String text1 = new String(result.getBytes(ISO), UTF_8);
+        DataOtishbalar dataOtishbalar = new DataOtishbalar(contxt, text1);
+        dataOtishbalar.execute();
+//        Toast.makeText(contxt, "" + result, Toast.LENGTH_SHORT).show();
 
 
     }

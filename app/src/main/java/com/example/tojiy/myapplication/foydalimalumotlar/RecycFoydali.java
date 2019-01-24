@@ -19,6 +19,8 @@ import com.example.tojiy.myapplication.UNVERSALCLASS;
 import com.example.tojiy.myapplication.foydalimalumotlar.javoblarvaraqasi.JavoblarTN;
 import com.example.tojiy.myapplication.foydalimalumotlar.mosfanlar.ConnMosfan;
 import com.example.tojiy.myapplication.foydalimalumotlar.otishballari.ConnOtishbalar;
+import com.example.tojiy.myapplication.foydalimalumotlar.savoljavob.ConnSavolJavob;
+import com.example.tojiy.myapplication.foydalimalumotlar.savoljavob.SavolJavob;
 import com.example.tojiy.myapplication.foydalimalumotlar.tasdiqdarsliklar.ConnTasdiqlangandarslik;
 import com.example.tojiy.myapplication.foydalimalumotlar.testtopshiriqlari.ConHttpTestTop;
 import com.example.tojiy.myapplication.foydalimalumotlar.testtopshiriqlari.TestTopshiriq1;
@@ -80,7 +82,12 @@ public class RecycFoydali extends RecyclerView.Adapter<RecycFoydali.FoydaliHolde
                 if (getSetFoydalis.get(i).getUrl().trim().contains("otishballari")) {
 
                     ConnOtishbalar connOtishbalar = new ConnOtishbalar(context);
-                    connOtishbalar.execute("aotishballnsdsdfgxzcvAEF","kalit");
+                    connOtishbalar.execute("aotishballnsdsdfgxzcvAEF", "kalit");
+                }
+
+                if (getSetFoydalis.get(i).getUrl().trim().contains("savoljavob")) {
+
+                    v.getContext().startActivity(new Intent(v.getContext(), SavolJavob.class));
                 }
 
             }
